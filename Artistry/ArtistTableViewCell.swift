@@ -11,5 +11,6 @@ import UIKit
 class ArtistTableViewCell: UITableViewCell {
 
   @IBOutlet weak var bioLabel: UILabel!
-
+  @IBOutlet weak var lblArtistName: UILabel!
+  @IBOutlet weak var imgArtist: UIImageView!
 }

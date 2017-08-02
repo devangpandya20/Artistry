@@ -31,8 +31,17 @@ class ArtistListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.rowHeight = UITableViewAutomaticDimension
-    tableView.estimatedRowHeight = 140
+    tableView.estimatedRowHeight = 10
+    
   }
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange , object: .none, queue: OperationQueue.main) { [weak self] _ in
+      self?.tableView.reloadData()
+    }
+  }
+  
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let destination = segue.destination as? ArtistDetailViewController,
@@ -53,7 +62,16 @@ extension ArtistListViewController: UITableViewDataSource {
     let artist = artists[indexPath.row]
     
     cell.bioLabel.text = artist.bio
+    cell.imgArtist.image = artist.image
+    cell.lblArtistName.text = artist.name
     
+    cell.lblArtistName.backgroundColor = UIColor(red: 1, green: 152 / 255, blue: 0, alpha: 1)
+    cell.lblArtistName.textColor = UIColor.white
+    cell.lblArtistName.textAlignment = .center
+    cell.selectionStyle = .none
+    
+    cell.lblArtistName.font = UIFont.preferredFont(forTextStyle: .headline)
+    cell.bioLabel.font = UIFont.preferredFont(forTextStyle: .body)
     return cell
   }
 }
