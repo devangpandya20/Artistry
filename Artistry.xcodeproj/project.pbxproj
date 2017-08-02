@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		863A6E3D1F31D052002668D9 /* ArtistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863A6E3C1F31D052002668D9 /* ArtistTableViewCell.swift */; };
 		A23F75351C9BA757006FA46F /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F75341C9BA757006FA46F /* ArtistDetailViewController.swift */; };
 		A23F75371C9BADB7006FA46F /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23F75361C9BADB7006FA46F /* Work.swift */; };
 		A2D7F3091C8CE3F60097399A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7F3081C8CE3F60097399A /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		863A6E3C1F31D052002668D9 /* ArtistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistTableViewCell.swift; sourceTree = "<group>"; };
 		A23F75341C9BA757006FA46F /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		A23F75361C9BADB7006FA46F /* Work.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		A23F753A1C9BC89A006FA46F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A2D7F30C1C8CE3F60097399A /* Main.storyboard */,
+				863A6E3C1F31D052002668D9 /* ArtistTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				A23F75371C9BADB7006FA46F /* Work.swift in Sources */,
 				A23F75351C9BA757006FA46F /* ArtistDetailViewController.swift in Sources */,
 				A2D7F31F1C8CE4640097399A /* ArtistListViewController.swift in Sources */,
+				863A6E3D1F31D052002668D9 /* ArtistTableViewCell.swift in Sources */,
 				A2D7F3091C8CE3F60097399A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

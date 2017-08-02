@@ -30,6 +30,8 @@ class ArtistListViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 140
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,11 +48,11 @@ extension ArtistListViewController: UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ArtistTableViewCell
     
     let artist = artists[indexPath.row]
     
-    cell.textLabel?.text = artist.bio
+    cell.bioLabel.text = artist.bio
     
     return cell
   }
